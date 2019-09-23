@@ -36,13 +36,13 @@ public class Teacher extends Person{
 
     public String introduceWith(Student jerry) throws NoSuchFieldException, IllegalAccessException {
 
-        if(this.klass.getClass().getDeclaredField("number").get(this.klass).toString() != jerry.klass.getClass().getDeclaredField("number").get(jerry.klass).toString())
+        if(this.klass.getClass().getDeclaredField("number").get(this.klass).toString() == jerry.klass.getClass().getDeclaredField("number").get(jerry.klass).toString() || this.klass == jerry.klass)
         {
-            return "My name is " + this.name + ". I am " + this.age + " years old. I am a Teacher. I don't teach " + jerry.name + ".";
-        }
-        else {
             return "My name is " + this.name + ". I am " + this.age + " years old. I am a Teacher. I teach " + jerry.name + ".";
         }
+        else {
 
+            return "My name is " + this.name + ". I am " + this.age + " years old. I am a Teacher. I don't teach " + jerry.name + ".";
+        }
     }
 }
