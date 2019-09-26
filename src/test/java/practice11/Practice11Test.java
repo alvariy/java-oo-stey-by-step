@@ -118,7 +118,7 @@ public class Practice11Test {
     @Test
     public void should_teacher_introduce_itself_with_no_class_teaching() throws Exception {
         Teacher tom = new Teacher(1, "Tom", 21);
-        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.");
+        assertThat(tom.introduce()).isEqualTo("My name is Tom. I am 21 years old. I am a Teacher. I teach No Class noice.");
     }
 
 //    @Test
